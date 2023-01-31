@@ -1,0 +1,123 @@
+body{
+    background-color: rgb(17, 27, 45);
+    margin: 130px;
+    }
+.a{
+    height: 250px;
+    width: 200px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    border-bottom-left-radius: 70px 140px;
+    border-bottom-right-radius: 70px 140px;
+    border-top-left-radius: 100px 30px;
+    border-top-right-radius: 100px 30px;
+    z-index: 1;
+}
+.a::before{
+    content: '';
+    position: absolute;
+    height: 52px;
+    width: 168px;
+    border: 5px groove #fff;
+    background-color: rgba(117, 87, 23);
+    border-top-right-radius:100px 30px;
+    border-top-left-radius: 100px 30px;
+    border-bottom-left-radius: 100px 30px;
+    border-bottom-right-radius: 100px 30px;
+    left: 12px;
+    top: 6px;
+    box-shadow: 0px 7px 2px 8px #080517e8,
+                0px 27px 3px 6px #056dff7d;
+    
+
+}
+.a::after{
+    position: absolute;
+    content: '';
+    height: 70px;
+    width: 36px;
+    background-color: rgb(17, 27, 45);
+    border: 20px solid #fff;
+    top: 90px;
+    left: 175px;
+    border-top-right-radius: 277px 143px;
+    border-bottom-right-radius:274px 255px;
+    border-top-width: 19px;
+    transform: rotate(7deg);
+}
+.plate{
+    position: relative;
+    height: 79px;   
+    width: 240px;
+    background: linear-gradient(to right,#1644c8, #eeeed7);
+    border-radius: 43%;
+    box-shadow: 0 35px 35px rgb(0 0 0/20%);
+    top: 60px;
+    right: 0px;
+    margin: 0 auto;
+}
+.plate::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+    height: 50px;
+    width: 198px;
+    left: 60px;
+    transform: translateX(-20%);
+}
+.plate::after{
+    content: '';
+    position: absolute;
+    top:30px;
+    left:30px;
+    bottom: 30px;
+    right: 30px;
+    background: radial-gradient(rgba(0,0,0,0.2) 25%, transparent, transparent);
+    border-radius: 50%;
+}
+.vapour{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 40px;
+    }
+.vapour span{
+    position: relative;
+    bottom: 10px;
+    height: 120px;
+    min-width: 4px;
+    background-color: #ffffff54;
+    display: block;
+    border-radius: 50%;
+    margin: 0 1px auto;
+    animation: anim 5s linear infinite;
+    opacity: 0;
+    filter: blur(3px);
+    animation-delay: calc(var(--i)* -0.5s);
+    }
+@keyframes anim{
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.1;
+       
+    }
+    50%{
+        transform: translateY(-150px) scaleX(5);
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translateY(-300px) scaleX(10);
+    }
+}
